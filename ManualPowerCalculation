@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner scan= new Scanner(System.in);
+        int b=scan.nextInt();
+        int e=scan.nextInt();
+        int pow=1;
+        if(e!=0){ 
+            for(int i=1;i<=e;i++) pow=pow*b;
+            System.out.println(pow);
+        }
+      
+        else if(b==0)System.out.println("0");
+        else System.out.println("1");
+        
+    }
+}
