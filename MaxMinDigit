@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan= new Scanner(System.in);
+        int n= scan.nextInt();
+        int min=9;
+        int max=0;
+        if(n<0) n=n*(-1);
+        if(n==0) min=max=0;
+        while(n!=0){
+            int r= n%10;
+            if(r<=min) min=r;
+            if(r>=max) max=r;
+            n=n/10;
+        }
+        System.out.println(max+" "+min);
+    }
+}
