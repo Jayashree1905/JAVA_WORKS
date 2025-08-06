@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+public class Solution {
+    
+    public static boolean prime(int n){
+        if(n<=1) return false;
+        for(int i=2;i<n;i++){
+            if(n%i==0) return false;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n1= s.nextInt();
+        int n2= s.nextInt();
+        int flag = 0;
+        for(int i=n1;i<=n2;i++){
+            if(prime(i)){
+                flag=1;
+                System.out.print(i+" ");
+            }
+        }
+        if(flag==0) System.out.println("No prime numbers");
+    }
+}
