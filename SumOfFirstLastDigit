@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static int first(int n){
+        int first=0;
+        while(n!=0){
+            first = n%10 ;
+            n/=10;
+        }
+        return first;
+    }
+    public static int last(int n){
+        int last =0;
+         for(int i = 1;i==1;i++){
+            last = (last*10) + (n%10);
+            n/=10;
+        }
+        return last;
+    }
+
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        if (n<0) n=n*(-1);
+        int f = first(n);
+        int l = last(n);
+        System.out.println(f + l);
+    }
+}
