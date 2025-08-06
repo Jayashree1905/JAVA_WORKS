@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static int cal(int n){
+        int c=0;
+        while(n!=0){
+            c++;
+            n/=10;
+        }
+        return c;
+    }
+    public static int res(int r){
+        int ch=0;
+        while(r!=0){
+            int re=r%10;
+            ch=(ch*10)+re;
+            r/=10;
+        }
+        return ch;
+    }
+
+    public static void main(String[] args) {
+        Scanner s= new Scanner(System.in);
+        int n=s.nextInt();
+        int c=cal(n);
+        int sq=n*n;
+        int r=0;
+        for(int i=1;i<=c;i++){
+            r=(r*10)+(sq%10);
+            sq/=10;
+        }
+        int rev=res(r);
+        if(n==rev) System.out.println("Automorphic");
+        else System.out.println("Not Automorphic");
+    }
+}
